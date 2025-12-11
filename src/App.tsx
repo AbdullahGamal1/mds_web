@@ -14,6 +14,8 @@ import Ecosystem from './pages/Ecosystem';
 import Module from './pages/Module';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Blog from './pages/Blog';
+import FAQ from './pages/FAQ';
 
 const App: React.FC = () => {
   return (
@@ -35,8 +37,9 @@ const App: React.FC = () => {
                   <Route path="/support" element={<Support />} />
                   <Route path="/ecosystem" element={<Ecosystem />} />
                   <Route path="/module" element={<Module />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/faq" element={<FAQ />} />
                   <Route path="/about" element={<div className="p-10 text-center">About Us Page (Coming Soon)</div>} />
-                  <Route path="/blog" element={<div className="p-10 text-center">Blog Page (Coming Soon)</div>} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>

@@ -4,6 +4,7 @@ import RootApp from './App';
 import './index.css';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { HelmetProvider } from 'react-helmet-async';
+import './i18n/config'; // Initialize i18n
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
