@@ -1,0 +1,5 @@
+{
+  "name": "MerchMate AI",
+  "description": "Upload your logo and instantly generate realistic product mockups using Gemini 2.5 Flash and Gemini 3 Pro.",
+  "requestFramePermissions": []
+}

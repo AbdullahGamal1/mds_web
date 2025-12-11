@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services Page - Customer Workflows</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#F59E0B",
+            "background-light": "#f8f7f6",
+            "background-dark": "#1a1511",
+            "surface": "#ffffff",
+            "surface-dark": "#1c1c1c"
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-800 px-6 sm:px-10 lg:px-20 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50">
+<div class="flex items-center gap-4 text-gray-900 dark:text-gray-100">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-semibold leading-tight tracking-[-0.015em]">Zoho Partner</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-10">
+<div class="flex items-center gap-8 text-gray-700 dark:text-gray-300">
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Case Studies</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Blog</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/80 transition-colors">
+<span class="truncate">Get a Quote</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<section class="px-6 sm:px-10 lg:px-20 py-20 md:py-32">
+<div class="mx-auto max-w-7xl">
+<div class="@container">
+<div class="flex flex-col gap-12 @[960px]:flex-row @[960px]:items-center">
+<div class="flex flex-col gap-8 text-left @[960px]:w-1/2 @[960px]:gap-10">
+<div class="flex flex-col gap-4">
+<h1 class="text-gray-900 dark:text-gray-100 text-5xl font-extrabold leading-tight tracking-tighter @[520px]:text-6xl">Streamline Your Business with Expert Zoho Solutions</h1>
+<p class="text-gray-600 dark:text-gray-400 text-lg font-normal leading-relaxed @[520px]:text-xl">From implementation to ongoing support, we build custom workflows that drive growth and efficiency.</p>
+</div>
+<button class="flex w-full @[480px]:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/80 transition-colors shadow-lg shadow-primary/20">
+<span class="truncate">Schedule a Free Consultation</span>
+</button>
+</div>
+<div class="w-full @[960px]:w-1/2 bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-2xl" data-alt="Abstract green and white geometric shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8iKKYf22fWmou9rsRZg_Sq2lyAx0W7D8kvA98JE6J4qd56XESd32I8WlcSEiUjn57Jp0dKQsihrxjtjdMB0YLtZ32fKaExx7IycAhs6XbMEtVd_XP2oJ6h8sv5QP0IDwnwlUJ0iSnhOoVl9v4QR8ZaW8wqlaFgG8Cx5hp8h46SES9Ah3LmtXLuL-1yuxTDOGpL8yApRvvRUUsNTpywL0QUMbrLgX60ccG96sawXH50zQ9kBi-q0-VnNXYsztnQ03HzwrT__NHOOM");'></div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 sm:px-10 lg:px-20 py-20 md:py-32 bg-surface dark:bg-surface-dark">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col items-center text-center gap-4 mb-12">
+<h2 class="text-gray-900 dark:text-gray-100 text-4xl font-extrabold leading-tight tracking-tighter max-w-2xl">How We Help: A Look at Our Process</h2>
+<p class="text-gray-600 dark:text-gray-400 text-lg max-w-3xl leading-relaxed">We follow a structured, transparent workflow for every service to ensure your project's success from start to finish.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-background-light dark:bg-background-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" data-alt="Team collaborating around a whiteboard with charts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbWWScVTV49jVt9EwKv1BcTrw_tgEYoLG71ANhrGHj6PnMVngsjUTr0nxmJtORHLuQfOFbEKYXo8KEyzSTSIAJdFcCt1Og7Xk0NEU4KtzSFPVbDUqtiSbiyHMMZe793PDIYlXe8awLCG_TTXsFOpwgxT3wJJBiU6RqiOeEYOSJjl4m_YExXLo_0dxcM0SYGk3x7Qxb01kELTbqREC10CQV0GA2XGK_EUPheFAeZJgl_wjMPd8LdIf6l6Rml21_AFIFL0VXM3LYOoU");'></div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-normal">Zoho Implementation</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Workflow: Discovery → System Setup → Data Migration → Go-Live</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-background-light dark:bg-background-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" data-alt="Close up of code on a computer screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC87WOKLwUFL8QxGeMWNVUfDPcjYSPa_6HKZJ6BE1e_ZDImK4bUqpUH8Bi-nHTZ70RaV0HvxtnagKwlkq8L0-JQd57oCkKNXWQJqz7gW-vfNcX6W82A1suFNz-dfBFt9ygJl0aPT9XIDHanyj7ml_u54N6up5lVc8naPCid_1BKeeRyeCtGdwlNB4JfPvcq1DKQWQcneVDZJYZ-8sDUsXuL0X1CPMi9Q8oCwFh5LnH7e65BFtKu1PHY2btaRUBDrUYopu5Z1v3md3s");'></div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-normal">Zoho Customization</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Workflow: Requirement Analysis → Custom Module Dev → UI/UX Personalization → Deployment</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-background-light dark:bg-background-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" data-alt="Abstract network of interconnected digital nodes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAo5OwThqUwzZ6H54AH_JgwZY9gpRBnFN2ZglFvAOa6monRY6WVzYRzed-UCxeKWvMaY8sD9_UvWvlqscegA4AHMsF4kkRsk4u7S4yzlsNdS026yMtx3dr3quC0SRs-DPr8XvbQG9upuMf7VuBA6vkHfIMXLMPw8qdYaV1YmwefCPyF2knA4a_3KWsbGLPDvvaU-uRpYo-G3bdEC1EyE7PWoaWcYEh1IoOhsdtglRv21GxRXtp8lp81IlSRPqX9njeBFh7gZfpUhY");'></div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-normal">Zoho Integration</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Workflow: API Assessment → Connector Setup → Data Sync Mapping → Testing</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-background-light dark:bg-background-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" data-alt="Gears and cogs moving in a complex machine" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwOlJPJCZmAPlZCd4RU0ptzUVG-glTF1ArCic2eBjPj_ASPlh4pO9CMVJZjKVk_87XcVR5EEpQn_e4kVqQeyKEFvdBkm-wc5kxL0eLiPXuHWc66eoM_BGmpJPb0Me3n5BtBEahGrZ1vlOTlUydZ8cqD7KtVDbxxvWpt8QTA5qewZh-T5IitgEUEu-B_FJKohBjBJhwNjHxb6lVsLIkOUbDCMJveLjeGStNrb7W8ObzIjX9MJ5W9L331s8D-u67Db-KveU1LMcxoGY");'></div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-normal">Process Automation</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Workflow: Process Mapping → Blueprint/Workflow Rule Creation → Automated Triggers → Monitoring</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-background-light dark:bg-background-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" data-alt="Instructor presenting to a group in a classroom" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5g3sAfI8MsUXnWyUU65b74A0po8D0__SoJGxw08D3zHjoP5-tJ3dXVaijM7OLAe9ooJ4L3I7nCtMN7yjcagJjPOoM8d4nQHa63gCFOLi5rJBmva5ex7Fsjw4OK-GxuIxCKA3PVyhN2R9yFKKQlOSp9OMh6dgkWQxMpfAyPKddJ_a9QL2h9bYypJZ8uyvCkEk_Fa1w32h7MhlLN9yN6Fb4uGj5kWOvctt-_mizaQtiu6_SoWg29Ivj4F60Sb7eAO71kbhAGzNCGO0");'></div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-normal">User Training</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Workflow: Needs Analysis → Custom Curriculum → On-site/Remote Sessions → Resource Library</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-background-light dark:bg-background-dark">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" data-alt="Support agent with a headset working on a laptop" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIBvVS9595obgXHp1obd207rj-_bTeHbzMUOj_rQsNK5M_wMxcojRbdmixVCYp1dmuxnvC0PzMp8nfQpJ-CyT1x8AVhwEncgvT32evKtxkdQDqSRA-i8p5lvqndV2jZhakIizq2lK4Kg1luX6g3uesi8CXPspr6EqzY5YBprZ2vzqqM4hbE4g0614ySAMwpx9a9s_9PEfzars4P3unsP_h_nSJIYSg0IPp7Cpq01v7hJ_QXfo8i1-1Lpvqs0Hb3nS6iUddxkEOL7I");'></div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-normal">Ongoing Support</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Workflow: Ticket Submission → Triage &amp; Diagnosis → Resolution → Follow-up</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 sm:px-10 lg:px-20 py-20 md:py-32">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-gray-900 dark:text-gray-100 text-4xl font-extrabold leading-tight tracking-tighter max-w-2xl">The Value We Deliver</h2>
+<p class="text-gray-600 dark:text-gray-400 text-lg font-normal leading-relaxed max-w-3xl">Our services are designed to address your key business challenges and deliver tangible results.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-1 gap-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-surface dark:bg-surface-dark p-8 flex-col items-start text-left">
+<div class="text-primary bg-primary/10 p-3 rounded-xl">
+<span class="material-symbols-outlined text-4xl">trending_up</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-tight">Increased Efficiency</h3>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-relaxed">Streamline your operations with automated workflows tailored to your business needs.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-surface dark:bg-surface-dark p-8 flex-col items-start text-left">
+<div class="text-primary bg-primary/10 p-3 rounded-xl">
+<span class="material-symbols-outlined text-4xl">savings</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-tight">Reduced Costs</h3>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-relaxed">Eliminate manual tasks and optimize resource allocation to lower operational expenses.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-surface dark:bg-surface-dark p-8 flex-col items-start text-left">
+<div class="text-primary bg-primary/10 p-3 rounded-xl">
+<span class="material-symbols-outlined text-4xl">rocket_launch</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-tight">Scalable Growth</h3>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-relaxed">Build a flexible Zoho ecosystem that grows with your business and adapts to new challenges.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 sm:px-10 lg:px-20 py-20 md:py-32">
+<div class="mx-auto max-w-5xl bg-surface dark:bg-surface-dark rounded-2xl p-10 md:p-20 text-center border border-gray-200 dark:border-gray-800">
+<div class="flex flex-col gap-6 items-center">
+<h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-gray-100 tracking-tighter">Ready to Transform Your Operations?</h2>
+<p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">Let's discuss your unique challenges. Our experts are ready to build a Zoho solution that works for you.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/80 transition-colors mt-4 shadow-lg shadow-primary/20">
+<span class="truncate">Get a Quote</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
+<div class="mx-auto max-w-7xl px-6 sm:px-10 lg:px-20 py-16">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+<div class="flex flex-col gap-4 items-start">
+<div class="flex items-center gap-4 text-gray-900 dark:text-gray-100">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-semibold leading-tight tracking-[-0.015em]">Zoho Partner</h2>
+</div>
+<div class="text-sm text-gray-500 dark:text-gray-400">© 2024 Zoho Partner. All rights reserved.</div>
+</div>
+<div class="flex items-center gap-8 text-sm text-gray-600 dark:text-gray-400">
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

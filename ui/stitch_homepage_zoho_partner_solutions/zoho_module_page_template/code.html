@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zoho Module Page Template</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#F97316",
+              "background-light": "#FFF7F2",
+              "background-dark": "#1C1917",
+              "surface": "#FFFFFF",
+              "surface-dark": "#292524"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .sticky-nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      details > summary { list-style: none; }
+      details > summary::-webkit-details-marker { display: none; }
+      details[open] .rotate-icon {
+        transform: rotate(180deg);
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 bg-background-light/80 px-6 backdrop-blur-md dark:border-primary/30 dark:bg-background-dark/80 md:px-10 py-3">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Partner Company</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-10">
+<div class="flex items-center gap-8">
+<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">CRM</a>
+<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Books</a>
+<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Inventory</a>
+<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Desk</a>
+<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Creator</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[-0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Contact Us</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<section class="py-20 md:py-24 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-4 text-left">
+<h1 class="text-4xl font-extrabold leading-tight tracking-[-0.03em] md:text-5xl lg:text-6xl text-gray-900 dark:text-white">Streamline Your Business with Expert Zoho CRM Solutions</h1>
+<p class="text-lg font-normal leading-relaxed text-gray-600 dark:text-gray-300 max-w-xl">Unlock the full potential of Zoho CRM with our certified customizations and integrations, tailored to your unique business workflows.</p>
+</div>
+<button class="flex self-start min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[-0.015em] hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+<span class="truncate">Book a Free Demo</span>
+</button>
+</div>
+<div class="w-full">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl shadow-2xl shadow-primary/10" data-alt="Abstract green and white geometric shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEvJV5DsKjqQYGpkXyb9KR5nkrfYsNk2-y2gbr0baBeKw9rqyvJG2f675CzHmMsDXOs-Q8rtdzrfdPWxx616GFQcrNGNtH4Ji_12hrqCiLgaeApitoruEG3ezhz0-DffLhbpVqSPln4AqCtJ7k7UL4_yiztoo8EY_mzQRGQoXKPwLgKbgMxoUrLxS7k3VzAHWxjylbFJKDYJiDSqfALURn6KKfYBjFY-gOuR-8dZ-6jcUbc-QygZBIlc5FCoy8PMbeus65zxxtEjk");'></div>
+</div>
+</div>
+</div>
+</section>
+<div class="sticky-nav bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-y border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-center gap-2 overflow-x-auto py-3">
+<a class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg px-4 bg-transparent hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="#functionality">
+<p class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300">Functionality</p>
+</a>
+<a class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg px-4 bg-transparent hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="#solutions">
+<p class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300">Gaps &amp; Solutions</p>
+</a>
+<a class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg px-4 bg-transparent hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="#case-studies">
+<p class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300">Case Studies</p>
+</a>
+<a class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg px-4 bg-transparent hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors" href="#faq">
+<p class="text-sm font-medium leading-normal text-gray-700 dark:text-gray-300">FAQ</p>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 space-y-20 md:space-y-28">
+<section class="max-w-3xl mx-auto text-center" id="introduction">
+<h2 class="text-3xl font-bold leading-tight tracking-[-0.02em] md:text-4xl text-gray-900 dark:text-white">What is Zoho CRM?</h2>
+<p class="text-lg leading-relaxed mt-4 text-gray-600 dark:text-gray-300">A brief overview of what Zoho CRM is and its core benefits for managing customer relationships, sales pipelines, and marketing automation. It empowers businesses to attract, retain, and satisfy customers to grow their company.</p>
+</section>
+<section id="functionality">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold leading-tight tracking-[-0.02em] md:text-4xl text-gray-900 dark:text-white">Core Functionality</h2>
+<p class="text-lg leading-relaxed mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-300">Explore the key features that make Zoho CRM a powerful tool for businesses of all sizes.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-surface dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 transition-all hover:shadow-lg hover:border-primary/50">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary mb-5">
+<span class="material-symbols-outlined">group</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Lead Management</h3>
+<p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">Capture, track, and score leads from various sources to build a robust sales pipeline.</p>
+</div>
+<div class="bg-surface dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 transition-all hover:shadow-lg hover:border-primary/50">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary mb-5">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Sales Automation</h3>
+<p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">Automate repetitive sales tasks, from follow-ups to quote generation, freeing up your team to sell.</p>
+</div>
+<div class="bg-surface dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 transition-all hover:shadow-lg hover:border-primary/50">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary mb-5">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Analytics &amp; Reporting</h3>
+<p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">Gain actionable insights with real-time dashboards and comprehensive reports on sales performance.</p>
+</div>
+<div class="bg-surface dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 transition-all hover:shadow-lg hover:border-primary/50">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary mb-5">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Marketing Automation</h3>
+<p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">Run targeted email campaigns, manage social media, and measure marketing ROI effectively.</p>
+</div>
+<div class="bg-surface dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 transition-all hover:shadow-lg hover:border-primary/50">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary mb-5">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Customer Support</h3>
+<p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">Integrate helpdesk features to manage tickets and provide exceptional customer service.</p>
+</div>
+<div class="bg-surface dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 transition-all hover:shadow-lg hover:border-primary/50">
+<div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary mb-5">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Inventory Management</h3>
+<p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">Track products, manage price books, and integrate sales with inventory for seamless operations.</p>
+</div>
+</div>
+</section>
+<section id="solutions">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold tracking-[-0.02em] md:text-4xl text-gray-900 dark:text-white">How We Enhance Zoho CRM</h2>
+<p class="mt-4 text-lg leading-relaxed text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">From standard gaps to powerful custom solutions, see how we transform your CRM experience.</p>
+</div>
+<div class="bg-surface dark:bg-surface-dark p-2 rounded-xl border border-gray-200 dark:border-gray-800 max-w-4xl mx-auto">
+<div class="flex border-b border-gray-200 dark:border-gray-800">
+<button class="px-5 py-3 text-sm font-semibold border-b-2 border-primary text-primary w-1/3 text-center">Common Gaps</button>
+<button class="px-5 py-3 text-sm font-semibold border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors w-1/3 text-center">Our Customizations</button>
+<button class="px-5 py-3 text-sm font-semibold border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors w-1/3 text-center">Before &amp; After</button>
+</div>
+<div class="p-6 md:p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-600 dark:text-gray-300">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-red-500 mt-1 flex-shrink-0">error</span>
+<p><strong>Manual Data Entry:</strong> Teams spending hours on data input, leading to errors and lost productivity.</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-red-500 mt-1 flex-shrink-0">error</span>
+<p><strong>Disconnected Apps:</strong> Key business systems like accounting or project management don't sync with CRM.</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-red-500 mt-1 flex-shrink-0">error</span>
+<p><strong>Complex Workflows:</strong> Standard CRM processes don't match unique internal sales or service cycles.</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-red-500 mt-1 flex-shrink-0">error</span>
+<p><strong>Poor User Adoption:</strong> The system is too complex or unintuitive, leading to teams avoiding it.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-surface-dark dark:to-background-dark rounded-xl p-8 md:p-12" id="cta">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+<div class="text-white">
+<h2 class="text-3xl font-bold tracking-[-0.015em]">Ready to Optimize Your Workflow?</h2>
+<p class="mt-2 text-lg text-gray-300 max-w-2xl">Schedule a free, no-obligation consultation with our Zoho experts today.</p>
+</div>
+<button class="flex shrink-0 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[-0.015em] hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+<span class="truncate">Schedule Consultation</span>
+</button>
+</div>
+</section>
+<section id="faq">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-3xl font-bold tracking-[-0.02em] md:text-4xl text-center mb-12 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<div class="bg-surface dark:bg-surface-dark p-2 rounded-lg border border-gray-200 dark:border-gray-800">
+<details>
+<summary class="flex justify-between items-center font-semibold cursor-pointer text-gray-900 dark:text-white p-4">
+                        How long does a typical implementation take?
+                        <span class="material-symbols-outlined transform transition-transform rotate-icon">expand_more</span>
+</summary>
+<p class="p-4 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed">Implementation times vary based on complexity, but a standard setup can be completed in 4-6 weeks. Custom integrations and data migration may extend this timeline.</p>
+</details>
+</div>
+<div class="bg-surface dark:bg-surface-dark p-2 rounded-lg border border-gray-200 dark:border-gray-800">
+<details>
+<summary class="flex justify-between items-center font-semibold cursor-pointer text-gray-900 dark:text-white p-4">
+                        Can you integrate Zoho CRM with our existing software?
+                        <span class="material-symbols-outlined transform transition-transform rotate-icon">expand_more</span>
+</summary>
+<p class="p-4 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed">Absolutely. We specialize in creating custom integrations using Zoho's APIs to connect with accounting software, ERP systems, marketing platforms, and more for a seamless data flow.</p>
+</details>
+</div>
+<div class="bg-surface dark:bg-surface-dark p-2 rounded-lg border border-gray-200 dark:border-gray-800">
+<details>
+<summary class="flex justify-between items-center font-semibold cursor-pointer text-gray-900 dark:text-white p-4">
+                        Do you provide training and ongoing support?
+                        <span class="material-symbols-outlined transform transition-transform rotate-icon">expand_more</span>
+</summary>
+<p class="p-4 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed">Yes, we offer comprehensive user and administrator training to ensure high adoption rates. We also provide ongoing support and maintenance packages to keep your system running smoothly.</p>
+</details>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</body></html>
