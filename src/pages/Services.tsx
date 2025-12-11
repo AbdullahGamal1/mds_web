@@ -155,9 +155,8 @@ const Services: React.FC = () => {
                             </button>
                         </div>
                     </div>
+                </section>
             </div>
-        </section >
-        </div >
         </>
     );
 };
