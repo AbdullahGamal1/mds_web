@@ -13,6 +13,7 @@ import Support from './pages/Support';
 import Ecosystem from './pages/Ecosystem';
 import Module from './pages/Module';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 const App: React.FC = () => {
   return (
@@ -37,6 +38,7 @@ const App: React.FC = () => {
                   <Route path="/about" element={<div className="p-10 text-center">About Us Page (Coming Soon)</div>} />
                   <Route path="/blog" element={<div className="p-10 text-center">Blog Page (Coming Soon)</div>} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
               <Footer />
