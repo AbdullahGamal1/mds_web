@@ -1,42 +1,82 @@
 import React from 'react';
+import AnimatedCard from '../animations/AnimatedCard';
+import FadeIn from '../animations/FadeIn';
 
 const Solutions: React.FC = () => {
+    const solutions = [
+        {
+            icon: 'analytics',
+            title: 'CRM Implementation',
+            description: 'Streamline your sales pipeline with custom Zoho CRM setup tailored to your business needs.',
+            features: ['Lead Management', 'Sales Automation', 'Custom Workflows']
+        },
+        {
+            icon: 'account_balance',
+            title: 'ERP Solutions',
+            description: 'Integrate all your business processes with comprehensive Zoho ERP implementation.',
+            features: ['Financial Management', 'Inventory Control', 'Procurement']
+        },
+        {
+            icon: 'integration_instructions',
+            title: 'Custom Integration',
+            description: 'Connect Zoho with your existing tools and third-party applications seamlessly.',
+            features: ['API Integration', 'Data Migration', 'System Sync']
+        },
+        {
+            icon: 'support_agent',
+            title: 'Training and Support',
+            description: 'Comprehensive training programs and ongoing support to ensure your team\'s success.',
+            features: ['User Training', '24/7 Support', 'Documentation']
+        }
+    ];
+
     return (
-        <section className="px-6 md:px-10 py-20 md:py-24 bg-gray-50 dark:bg-gray-900/70">
-            <div className="pb-12 text-center">
-                <h2 className="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] md:text-4xl">Solutions Tailored for Business Growth</h2>
-                <p className="text-center text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">We focus on outcomes that matter, leveraging Zoho's powerful suite to solve your most pressing business challenges.</p>
+        <div className="@container px-6 sm:px-10 lg:px-20 py-20 md:py-32">
+            <div className="flex flex-col gap-12">
+                <FadeIn>
+                    <div className="flex flex-col gap-4 text-center max-w-3xl mx-auto">
+                        <h2 className="text-gray-900 dark:text-white text-4xl font-extrabold leading-tight tracking-tighter @[520px]:text-5xl">
+                            Our Zoho Solutions
+                        </h2>
+                        <p className="text-base font-normal leading-relaxed text-gray-600 dark:text-gray-400 @[520px]:text-lg">
+                            Comprehensive Zoho services designed to transform your business operations and drive growth.
+                        </p>
+                    </div>
+                </FadeIn>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                    {solutions.map((solution, index) => (
+                        <AnimatedCard key={index} delay={index * 0.1}>
+                            <div className="flex flex-col gap-4 p-6 lg:p-8 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 h-full hover:border-primary transition-colors">
+                                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <span className="material-symbols-outlined text-3xl text-primary">
+                                        {solution.icon}
+                                    </span>
+                                </div>
+
+                                <div className="flex flex-col gap-2">
+                                    <h3 className="text-gray-900 dark:text-white text-2xl font-bold">
+                                        {solution.title}
+                                    </h3>
+                                    <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
+                                        {solution.description}
+                                    </p>
+                                </div>
+
+                                <ul className="flex flex-col gap-2 mt-2">
+                                    {solution.features.map((feature, idx) => (
+                                        <li key={idx} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                                            <span className="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                            {feature}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </AnimatedCard>
+                    ))}
+                </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="flex flex-1 gap-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark p-6 flex-col hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                    <div className="flex items-center justify-center size-12 rounded-lg bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-300">
-                        <span className="material-symbols-outlined !text-3xl">trending_up</span>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <h3 className="text-gray-900 dark:text-white text-lg font-bold leading-tight">Boost Sales Efficiency</h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Streamline your sales process from lead to close. We implement and customize Zoho CRM to fit your unique sales funnel, providing insights that drive revenue.</p>
-                    </div>
-                </div>
-                <div className="flex flex-1 gap-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark p-6 flex-col hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                    <div className="flex items-center justify-center size-12 rounded-lg bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-300">
-                        <span className="material-symbols-outlined !text-3xl">settings_suggest</span>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <h3 className="text-gray-900 dark:text-white text-lg font-bold leading-tight">Automate Business Processes</h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Eliminate repetitive tasks and reduce manual error. Our experts build custom workflows and integrations that automate your operations for maximum efficiency.</p>
-                    </div>
-                </div>
-                <div className="flex flex-1 gap-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark p-6 flex-col hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                    <div className="flex items-center justify-center size-12 rounded-lg bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-300">
-                        <span className="material-symbols-outlined !text-3xl">account_balance_wallet</span>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <h3 className="text-gray-900 dark:text-white text-lg font-bold leading-tight">Gain Financial Control</h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed">Get a clear, real-time view of your company's finances. We configure Zoho Books for seamless accounting, invoicing, and expense tracking.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     );
 };
 

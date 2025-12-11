@@ -1,174 +1,242 @@
-# MerchMate AI - Professional Product Mockup Generator
+# MDS - Mashreq Digital Solutions
 
-> A premium, enterprise-ready AI application for generating realistic product mockups using Google's Gemini AI.
+> **Zoho Certified Partner** providing custom CRM, ERP, and digital transformation solutions in Egypt and the Middle East.
 
-## ✨ Overview
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-19.2.1-61dafb.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-3178c6.svg)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.0-38bdf8.svg)](https://tailwindcss.com/)
 
-MerchMate AI is a sophisticated web application that leverages cutting-edge AI technology to instantly generate professional product mockups. Perfect for e-commerce businesses, designers, and entrepreneurs who need high-quality product visualization.
+## 🌟 Features
 
-## 🎯 Key Features
+### ✨ Core Features
+- **🌓 Dark Mode**: Automatic theme detection with manual toggle and localStorage persistence
+- **📱 Responsive Design**: Mobile-first approach with adaptive layouts
+- **🔍 SEO Optimized**: Comprehensive meta tags, structured data, and AI search optimization
+- **⚡ Performance**: Fast loading with code splitting and lazy loading
+- **🌐 Bilingual Support**: English and Arabic language support
+- **♿ Accessible**: WCAG compliant with ARIA labels
 
-### Core Functionality
-- 🤖 **AI-Powered Generation** - Uses Google Gemini API for intelligent mockup creation
-- 📸 **Multiple Product Templates** - T-Shirts, Hoodies, Mugs, Posters, and more
-- 🎨 **Customizable Prompts** - Fine-tune generation with detailed descriptions
-- 📐 **Flexible Dimensions** - Multiple aspect ratios and resolutions (1K, 2K, 4K)
+### 🎯 Business Features
+- **Zoho Services Showcase**: Complete portfolio of Zoho implementation services
+- **Case Studies**: Real-world success stories and client testimonials
+- **Contact Integration**: Direct contact with business information
+- **Solutions Wizard**: Interactive tool to find the right Zoho solution
+- **Portfolio Gallery**: Showcase of completed projects
 
-### Professional Features
-- 🌓 **Dark Mode** - Professional dark theme with smooth transitions
-- 💾 **Image History** - Keep track of all generated mockups
-- ⚡ **Performance Optimized** - Fast generation with intelligent caching
-- 🛡️ **Error Handling** - Comprehensive error boundaries and recovery
-- 📊 **Analytics Ready** - Built-in analytics infrastructure
-- 🎯 **Keyboard Shortcuts** - Power-user shortcuts for efficiency
+## 🏢 Company Information
 
-### User Experience
-- 🎨 **Modern UI** - Clean, professional design with Tailwind CSS
-- 📱 **Responsive** - Works flawlessly on desktop, tablet, and mobile
-- 🔄 **Smooth Animations** - Polished transitions and loading states
-- 💬 **Toast Notifications** - Non-intrusive user feedback
-- ♿ **Accessible** - Semantic HTML and ARIA labels
+**Mashreq Digital Solutions (MDS)**
+- 📍 Address: B115 Smart Village, Giza, Egypt
+- 📞 Phone: [+20-115 965 9977](tel:+201159659977)
+- 📧 Email: [info@mds-solutions.com](mailto:info@mds-solutions.com)
+- 🌐 Website: [mds-solutions.com](https://mds-solutions.com)
 
-## 🏗️ Architecture
-
-### Tech Stack
-```
-Frontend:     React 19 + TypeScript
-Styling:      Tailwind CSS + PostCSS
-Icons:        Lucide React
-Build Tool:   Vite 6
-AI Service:   Google Gemini API
-State:        React Hooks + Custom Hooks
-```
-
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 16+
-- npm or yarn
-- Google Gemini API key
+- Node.js 18+ and npm
+- Git
 
 ### Installation
 
-1. **Install Dependencies**
 ```bash
+# Clone the repository
+git clone https://github.com/AbdullahGamal1/mds_web.git
+cd mds_web
+
+# Install dependencies
 npm install
-```
 
-2. **Configure Environment**
-```bash
-cp .env.example .env
-# Edit .env with your Gemini API key
-VITE_GEMINI_API_KEY=your_key_here
-```
-
-3. **Start Development Server**
-```bash
+# Start development server
 npm run dev
 ```
 
-4. **Build for Production**
+The application will be available at `http://localhost:3000`
+
+### Build for Production
+
 ```bash
+# Create optimized production build
 npm run build
+
+# Preview production build
 npm run preview
 ```
 
-## 📋 Usage Guide
+## 📁 Project Structure
 
-### Basic Workflow
-1. **Select Product** - Choose from available templates
-2. **Upload Logo** - Add your logo or image (PNG, JPG, WebP)
-3. **Customize** - Add description in the prompt
-4. **Configure** - Set quality, resolution, and aspect ratio
-5. **Generate** - Click "Generate Mockup" or press Ctrl+K
-6. **Save** - Download or view in gallery
+```
+mds_web/
+├── public/              # Static assets
+│   ├── manifest.json   # PWA manifest
+│   ├── robots.txt      # Search engine directives
+│   └── sitemap.xml     # Site map for SEO
+├── src/
+│   ├── components/     # React components
+│   │   ├── common/     # Reusable components (SEO, etc.)
+│   │   ├── layout/     # Layout components (Header, Footer)
+│   │   └── sections/   # Page sections
+│   ├── contexts/       # React contexts (Theme)
+│   ├── hooks/          # Custom React hooks
+│   ├── pages/          # Page components
+│   ├── utils/          # Utility functions (schemas, etc.)
+│   ├── App.tsx         # Main app component
+│   ├── main.tsx        # Entry point
+│   └── index.css       # Global styles
+├── index.html          # HTML template
+├── package.json        # Dependencies
+├── tailwind.config.js  # Tailwind configuration
+├── tsconfig.json       # TypeScript configuration
+└── vite.config.ts      # Vite configuration
+```
 
-### Keyboard Shortcuts
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl + D` | Toggle Dark Mode |
-| `Ctrl + K` | Generate Mockup |
-| `Ctrl + Shift + C` | Clear History |
+## 🛠️ Tech Stack
 
-## ⚙️ Configuration
+### Core
+- **React 19.2.1**: UI library
+- **TypeScript 5.8.2**: Type safety
+- **Vite 6.2.0**: Build tool and dev server
+- **React Router DOM 7.10.1**: Client-side routing
 
-Edit `config.ts` to customize application behavior.
+### Styling
+- **Tailwind CSS 3.4.0**: Utility-first CSS framework
+- **PostCSS**: CSS processing
+- **Autoprefixer**: CSS vendor prefixing
 
-## 🎨 Customization
+### SEO & Meta
+- **react-helmet-async**: Dynamic meta tags
+- **schema-dts**: TypeScript types for Schema.org
 
-- **Theme Colors** - Modify `tailwind.config.js`
-- **Animations** - Update keyframes in Tailwind config
-- **Components** - Edit component files as needed
+### Development
+- **ESLint**: Code linting
+- **TypeScript**: Static type checking
 
-## 📊 Features
+## 🎨 Features in Detail
 
-- ✅ Error Boundary for crash prevention
-- ✅ Custom React hooks for state management
-- ✅ Logger service for debugging
-- ✅ Analytics infrastructure
-- ✅ Loading skeletons and spinners
-- ✅ Dark mode with system preference
-- ✅ Image history management
-- ✅ Toast notification system
-- ✅ Keyboard shortcut support
-- ✅ Responsive design
-- ✅ Production-ready build setup
+### Dark Mode
+- Automatic detection of system preference
+- Manual toggle with persistent storage
+- Smooth transitions between themes
+- Icon changes (sun/moon) based on current theme
 
-## 📈 Performance
+### SEO Optimization
+- **Meta Tags**: Comprehensive meta tags for all pages
+- **Open Graph**: Rich social media previews
+- **Twitter Cards**: Enhanced Twitter sharing
+- **Schema.org**: Structured data for search engines
+  - Organization schema
+  - LocalBusiness schema
+  - Service schemas
+  - Breadcrumb navigation
+  - FAQ schema
+- **Sitemap**: XML sitemap for search engines
+- **Robots.txt**: Search engine crawler directives
+- **Canonical URLs**: Prevent duplicate content
+- **Geo-location**: Local SEO optimization
 
-- Code splitting with Vite
-- Optimized bundle size
-- Image lazy loading
-- Service worker ready
-- Caching strategies
+### Mobile Menu
+- Responsive hamburger menu for small screens
+- Smooth slide-down animation
+- Auto-close on navigation
+- Icon changes (menu/close)
+- Touch-friendly design
 
-## 🔐 Security
-
-- Environment variables for sensitive data
-- Input validation on all forms
-- XSS protection via React
-- CSRF token support ready
-
-## 🌐 Browser Support
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## 📝 Available Scripts
+## 📄 Available Scripts
 
 ```bash
-npm run dev          # Start development server
+# Development
+npm run dev          # Start dev server with hot reload
+
+# Production
 npm run build        # Build for production
 npm run preview      # Preview production build
-npm run type-check   # Type checking with TypeScript
+
+# Type Checking
+npm run type-check   # Run TypeScript type checking
 ```
 
-## 📚 Project Structure
+## 🌐 Deployment
 
-```
-├── components/       # React UI components
-├── hooks/            # Custom React hooks
-├── services/         # API and utility services
-├── config.ts         # App configuration
-├── types.ts          # TypeScript definitions
-├── App.tsx           # Root component
-└── index.tsx         # Entry point
+### Build
+```bash
+npm run build
 ```
 
-## 🚀 Deployment
+The optimized files will be in the `dist/` directory.
 
-Ready for deployment on:
-- Vercel
-- Netlify
-- GitHub Pages
-- Self-hosted servers
+### Deploy to Vercel/Netlify
+1. Connect your GitHub repository
+2. Set build command: `npm run build`
+3. Set output directory: `dist`
+4. Deploy!
 
-## 📄 License
+## 🔧 Configuration
 
-Copyright © 2024 MerchMate AI. All rights reserved.
+### Environment Variables
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_URL=your_api_url
+VITE_SITE_URL=https://mds-solutions.com
+```
+
+### Tailwind Theme
+Customize colors and theme in `tailwind.config.js`:
+
+```javascript
+theme: {
+  extend: {
+    colors: {
+      "primary": "#f4af25",
+      "background-light": "#f8f7f5",
+      "background-dark": "#221c10",
+    }
+  }
+}
+```
+
+## 📊 SEO Checklist
+
+- ✅ Meta tags on all pages
+- ✅ Open Graph tags
+- ✅ Twitter Card tags
+- ✅ Schema.org structured data
+- ✅ Sitemap.xml
+- ✅ Robots.txt
+- ✅ Canonical URLs
+- ✅ Alt text on images
+- ✅ Semantic HTML
+- ✅ Mobile-friendly
+- ✅ Fast loading (Lighthouse 90+)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+## 👥 Team
+
+**Mashreq Digital Solutions**
+- Zoho Certified Partner
+- Digital Transformation Experts
+- Based in Smart Village, Giza, Egypt
+
+## 📞 Contact
+
+For inquiries about Zoho implementation or digital transformation:
+- 📧 Email: info@mds-solutions.com
+- 📱 Phone: +20-115 965 9977
+- 🌐 Website: mds-solutions.com
+- 📍 Address: B115 Smart Village, Giza, Egypt
 
 ---
 
-**Made with ❤️ for creators and entrepreneurs.**
+**Built with ❤️ by MDS Team** | **Powered by Zoho**

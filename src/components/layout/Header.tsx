@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../hooks/useTheme';
+import LanguageSwitcher from '../common/LanguageSwitcher';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +22,8 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-9">
             <Link className="text-sm font-medium leading-normal hover:text-primary transition-colors text-gray-700 dark:text-gray-200" to="/solutions">Services</Link>
             <Link className="text-sm font-medium leading-normal hover:text-primary transition-colors text-gray-700 dark:text-gray-200" to="/case-studies">Case Studies</Link>
+            <Link className="text-sm font-medium leading-normal hover:text-primary transition-colors text-gray-700 dark:text-gray-200" to="/blog">Blog</Link>
+            <Link className="text-sm font-medium leading-normal hover:text-primary transition-colors text-gray-700 dark:text-gray-200" to="/faq">FAQ</Link>
             <Link className="text-sm font-medium leading-normal hover:text-primary transition-colors text-gray-700 dark:text-gray-200" to="/about">About Us</Link>
             <Link className="text-sm font-medium leading-normal text-primary font-bold" to="/contact">Contact Us</Link>
           </div>
@@ -88,6 +91,20 @@ const Header: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Case Studies
+            </Link>
+            <Link
+              className="text-base font-medium leading-normal hover:text-primary transition-colors text-gray-700 dark:text-gray-200 py-2 border-b border-gray-200 dark:border-gray-700"
+              to="/blog"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              className="text-base font-medium leading-normal hover:text-primary transition-colors text-gray-700 dark:text-gray-200 py-2 border-b border-gray-200 dark:border-gray-700"
+              to="/faq"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
             </Link>
             <Link
               className="text-base font-medium leading-normal hover:text-primary transition-colors text-gray-700 dark:text-gray-200 py-2 border-b border-gray-200 dark:border-gray-700"
