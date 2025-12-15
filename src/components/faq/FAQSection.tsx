@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FadeIn from '../animations/FadeIn';
 import { getFAQSchema } from '../../utils/schemas';
 import SEO from '../common/SEO';
+import api from '../../services/api';
 
 interface FAQItem {
     id: string;
@@ -10,64 +11,35 @@ interface FAQItem {
     category: string;
 }
 
-const faqData: FAQItem[] = [
-    {
-        id: '1',
-        question: 'What is the typical implementation timeline?',
-        answer: 'Timelines vary by project complexity, but most standard CRM implementations take 2-4 weeks. More complex ERP solutions may take 6-12 weeks depending on customization requirements.',
-        category: 'Implementation'
-    },
-    {
-        id: '2',
-        question: 'Do you provide training for our team?',
-        answer: 'Yes! We provide comprehensive training for your team including hands-on sessions, documentation, and ongoing support to ensure everyone is comfortable using the system.',
-        category: 'Training'
-    },
-    {
-        id: '3',
-        question: 'What Zoho products do you specialize in?',
-        answer: 'We specialize in Zoho CRM, Zoho Books, Zoho Inventory, Zoho Projects, Zoho Desk, and custom integrations between Zoho products and third-party systems.',
-        category: 'Services'
-    },
-    {
-        id: '4',
-        question: 'Can you integrate Zoho with our existing systems?',
-        answer: 'Absolutely! We have extensive experience integrating Zoho with various third-party systems including accounting software, e-commerce platforms, and custom applications.',
-        category: 'Integration'
-    },
-    {
-        id: '5',
-        question: 'What kind of support do you offer after implementation?',
-        answer: 'We offer ongoing support packages including technical support, system maintenance, user training, and consultation for new features or optimizations.',
-        category: 'Support'
-    },
-    {
-        id: '6',
-        question: 'How much does a Zoho implementation cost?',
-        answer: 'Costs vary based on the scope of work, number of users, and customization requirements. Contact us for a free consultation and customized quote.',
-        category: 'Pricing'
-    },
-    {
-        id: '7',
-        question: 'Are you a certified Zoho partner?',
-        answer: 'Yes, we are a Zoho Certified Partner with extensive experience in implementing and customizing Zoho solutions for businesses across various industries.',
-        category: 'About'
-    },
-    {
-        id: '8',
-        question: 'Can you migrate data from our current system?',
-        answer: 'Yes, we provide data migration services to safely transfer your existing data to Zoho, ensuring data integrity and minimal disruption to your business.',
-        category: 'Implementation'
-    }
-];
-
-const categories = ['All', 'Implementation', 'Training', 'Services', 'Integration', 'Support', 'Pricing', 'About'];
-
 const FAQSection: React.FC = () => {
+    const [faqs, setFaqs] = useState<FAQItem[]>([]);
+    const [loading, setLoading] = useState(true);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
     const [openItems, setOpenItems] = useState<Set<string>>(new Set());
     const [feedback, setFeedback] = useState<Record<string, boolean | null>>({});
+
+    const categories = ['All', 'Implementation', 'Training', 'Services', 'Integration', 'Support', 'Pricing', 'About'];
+
+    useEffect(() => {
+        fetchFaqs();
+    }, [selectedCategory]);
+
+    const fetchFaqs = async () => {
+        setLoading(true);
+        try {
+            const params: any = {};
+            if (selectedCategory !== 'All') params.category = selectedCategory;
+            // Search is handled client side heavily for now, or could pass to API
+
+            const response = await api.get('/faq', { params });
+            setFaqs(response.data.faqs);
+        } catch (error) {
+            console.error('Error fetching FAQs:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     const toggleItem = (id: string) => {
         const newOpenItems = new Set(openItems);
@@ -83,14 +55,15 @@ const FAQSection: React.FC = () => {
         setFeedback({ ...feedback, [id]: helpful });
     };
 
-    const filteredFAQs = faqData.filter(faq => {
-        const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
+    // Client-side filtering for search query as backend search might not be overkill for small FAQ sets,
+    // but if we want backend search we can add it. For now, filter the fetched FAQs.
+    const filteredFAQs = faqs.filter(faq => {
         const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
             faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesSearch;
+        return matchesSearch;
     });
 
-    const faqSchema = getFAQSchema(faqData.map(faq => ({
+    const faqSchema = getFAQSchema(faqs.map(faq => ({
         question: faq.question,
         answer: faq.answer
     })));
@@ -143,8 +116,8 @@ const FAQSection: React.FC = () => {
                                     key={category}
                                     onClick={() => setSelectedCategory(category)}
                                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${selectedCategory === category
-                                            ? 'bg-primary text-white'
-                                            : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                                        ? 'bg-primary text-white'
+                                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                                         }`}
                                 >
                                     {category}
@@ -155,7 +128,9 @@ const FAQSection: React.FC = () => {
 
                     {/* FAQ Accordion */}
                     <div className="space-y-4">
-                        {filteredFAQs.length === 0 ? (
+                        {loading ? (
+                            <div className="text-center py-12 text-gray-500">Loading FAQs...</div>
+                        ) : filteredFAQs.length === 0 ? (
                             <div className="text-center py-12">
                                 <p className="text-gray-500 dark:text-gray-400">
                                     No questions found. Try adjusting your search or filter.
@@ -198,8 +173,8 @@ const FAQSection: React.FC = () => {
                                                         <button
                                                             onClick={() => handleFeedback(faq.id, true)}
                                                             className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${feedback[faq.id] === true
-                                                                    ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                                                                    : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                                                                ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                                                                : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                                                                 }`}
                                                         >
                                                             👍 Yes
@@ -207,8 +182,8 @@ const FAQSection: React.FC = () => {
                                                         <button
                                                             onClick={() => handleFeedback(faq.id, false)}
                                                             className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${feedback[faq.id] === false
-                                                                    ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
-                                                                    : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                                                                ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
+                                                                : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                                                                 }`}
                                                         >
                                                             👎 No
