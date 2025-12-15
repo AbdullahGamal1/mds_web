@@ -1,8 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+import morgan from 'morgan';
 import { config } from './config/env';
 import { errorHandler, notFound } from './middleware/error.middleware';
+import logger from './utils/logger';
 
 // Import routes
 import authRoutes from './routes/auth.routes';
@@ -16,6 +19,14 @@ import serviceRoutes from './routes/services.routes';
 
 const app = express();
 
+// Rate Limiter
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+
 // Middleware
 app.use(helmet());
 app.use(cors({
@@ -24,6 +35,8 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(morgan('combined', { stream: { write: (message: string) => logger.info(message.trim()) } }));
+app.use(limiter);
 
 // Static files for uploads
 app.use('/uploads', express.static(config.upload.dir));

@@ -20,6 +20,7 @@ const AdminLayout: React.FC = () => {
         { path: '/admin/faq', icon: '❓', label: 'FAQ', labelAr: 'الأسئلة الشائعة' },
         { path: '/admin/case-studies', icon: '💼', label: 'Case Studies', labelAr: 'دراسات الحالة' },
         { path: '/admin/newsletter', icon: '📰', label: 'Newsletter', labelAr: 'النشرة البريدية' },
+        { path: '/admin/services', icon: '🛠️', label: 'Services', labelAr: 'الخدمات' },
     ];
 
     return (
@@ -49,8 +50,8 @@ const AdminLayout: React.FC = () => {
                             key={item.path}
                             to={item.path}
                             className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${location.pathname === item.path
-                                    ? 'bg-primary text-white'
-                                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                                ? 'bg-primary text-white'
+                                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                                 }`}
                         >
                             <span className="text-xl">{item.icon}</span>

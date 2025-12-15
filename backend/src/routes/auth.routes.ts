@@ -4,11 +4,13 @@ import { hashPassword, comparePassword } from '../utils/password';
 import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from '../utils/jwt';
 import { AppError } from '../middleware/error.middleware';
 import { authenticate, AuthRequest } from '../middleware/auth.middleware';
+import { validateRequest } from '../middleware/validateRequest';
+import { loginSchema, registerSchema } from '../schemas/auth.schema';
 
 const router = Router();
 
 // Register new admin user
-router.post('/register', async (req, res, next) => {
+router.post('/register', validateRequest(registerSchema), async (req, res, next) => {
     try {
         const { email, password, name } = req.body;
 
@@ -49,7 +51,7 @@ router.post('/register', async (req, res, next) => {
 });
 
 // Login
-router.post('/login', async (req, res, next) => {
+router.post('/login', validateRequest(loginSchema), async (req, res, next) => {
     try {
         const { email, password } = req.body;
 
