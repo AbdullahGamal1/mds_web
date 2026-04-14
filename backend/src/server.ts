@@ -46,7 +46,10 @@ app.get('/health', (req, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+import { setupSwagger } from './config/swagger';
+
 // API Routes
+setupSwagger(app);
 app.use('/api/auth', authRoutes);
 app.use('/api/blog', blogRoutes);
 app.use('/api/testimonials', testimonialRoutes);

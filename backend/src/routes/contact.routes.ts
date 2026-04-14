@@ -2,17 +2,15 @@ import { Router } from 'express';
 import prisma from '../config/database';
 import { authenticate, authorize } from '../middleware/auth.middleware';
 import { AppError } from '../middleware/error.middleware';
+import { validateRequest } from '../middleware/validateRequest';
+import { createContactSchema, updateContactStatusSchema } from '../schemas/contact.schema';
 
 const router = Router();
 
 // Submit contact form (public)
-router.post('/', async (req, res, next) => {
+router.post('/', validateRequest(createContactSchema), async (req, res, next) => {
     try {
         const { name, email, phone, company, message } = req.body;
-
-        if (!name || !email || !message) {
-            throw new AppError('Name, email, and message are required', 400);
-        }
 
         const submission = await prisma.contactSubmission.create({
             data: {
@@ -74,7 +72,7 @@ router.get('/', authenticate, authorize('ADMIN', 'SUPER_ADMIN'), async (req, res
 });
 
 // Update submission status (admin only)
-router.patch('/:id', authenticate, authorize('ADMIN', 'SUPER_ADMIN'), async (req, res, next) => {
+router.patch('/:id', authenticate, authorize('ADMIN', 'SUPER_ADMIN'), validateRequest(updateContactStatusSchema), async (req, res, next) => {
     try {
         const { id } = req.params;
         const { status, notes } = req.body;

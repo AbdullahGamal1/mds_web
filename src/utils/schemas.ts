@@ -105,6 +105,7 @@ export const getWebSiteSchema = (): WithContext<WebSite> => ({
             '@type': 'EntryPoint',
             urlTemplate: `${MDS_INFO.url}/search?q={search_term_string}`
         },
+        // @ts-ignore - schema-dts type definition issue in strict mode
         'query-input': 'required name=search_term_string'
     }
 });
